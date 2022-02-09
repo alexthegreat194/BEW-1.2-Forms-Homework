@@ -64,7 +64,7 @@ def new_item():
         return redirect(url_for('main.item_detail', item_id=item.id))
 
     # TODO: Send the form to the template and use it to render the form fields
-    return render_template('new_item.html')
+    return render_template('new_item.html', form=form)
 
 @main.route('/store/<store_id>', methods=['GET', 'POST'])
 def store_detail(store_id):
